@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator for 姜鱼儿</title>
+  <link rel="stylesheet" href="./normalize.min.css">
+
+
+</head>
+<body>
+<p> 保时捷数目   <input type = "text" id = "text1" value = "0"> </p>
+<p> 礼花筒数目   <input type = "text" id = "text2" value = "0"> </p>
+<p> 开始时间-小时  <input type = "text" id = "text3" value = "0"> </p>
+<p> 开始时间-分钟  <input type = "text" id = "text4" value = "0"> </p>
+
+<button id="but">Click to Calculate</button>
+<p> 最终时间-小时<input type = "text" id = "text5"></p>
+<p> 最终时间-分钟<input type = "text" id = "text6"></p>
+
+</body>
+
+<script type="text/javascript">
+    but.onclick = function(){
+        
+        var number_car = parseInt(text1.value);
+        var number_firework = parseInt(text2.value);
+        var initial_time= parseInt(text3.value);
+        var initial_time_1 = parseInt(text4.value);
+        
+        var final_time = number_car * 10 + number_firework * 2 + initial_time * 60 + initial_time_1;
+        var hour = parseInt(final_time / 60);
+        var min = final_time - 60 * hour;
+        text5.value = hour;
+        text6.value = min;
+    }
+</script>
+
+</html>
